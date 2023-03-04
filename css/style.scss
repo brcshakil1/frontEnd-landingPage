@@ -1,0 +1,407 @@
+// primary style
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 3.3125rem;
+}
+
+h2 {
+    font-size: 2.3125rem;
+}
+
+h3 {
+    font-size: 1.235rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section-padding {
+    padding: 2rem 4rem;
+}
+
+.section-margin {
+    margin: 2rem 4rem;
+}
+// =========================
+// main styles
+// =========================
+// navbar 
+
+header {
+    width: 100%;
+    height: 60px;
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        height: 100%;
+
+        .links-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    padding: 0 1.5rem;
+                    
+                    a{
+                        color: #222;
+                        font-size: 1.2rem;
+                        &:hover {
+                            padding-top: 16px;
+                            border-top: 3px solid black;
+                            transition: all 0.4s ease-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sign-log {
+            a {
+                font-size: 1rem;
+                color: #222;
+                border: 1px solid #000;
+                padding: 5px 10px;
+                border-radius: 2px;
+                &:last-child {
+                    margin-left: 1rem;
+                    border: 1px solid #2ACFCF;
+                    &:hover{
+                        background-color: #2ACFCF;
+                        transition: all 0.4s ease-out;
+
+                    }
+                }
+
+                &:hover {
+                    background: #222;
+                    color: #fff;
+                    transition: all 0.4s ease-out;
+                }
+            }
+        }
+
+        .hamBurger{
+            display: none;
+            font-size: 30px;
+            color: #4e4e4d;
+            cursor: pointer;
+        }
+    }
+    
+    .nav-mobile {
+        display: none;
+        background-color: #3B3054;
+        margin: .7rem;
+        border-radius: 10px;
+        height: 370px;
+        position: absolute;
+        width: 95%;
+       nav {
+            ul {
+                li {
+                    text-align: center;
+                    padding-top: 2rem;
+                    a {
+                        font-family: sans-serif;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: #fff;
+                        transition: all 0.4s ease-in-out;
+                        &:hover {
+                            color: #cacaca;
+                        }
+                    }
+                }
+            }
+       }
+
+       .center-line {
+        border-top: 2px solid grey;
+        margin: 2rem;
+       }
+
+       .sign-log-mobile {
+            text-align: center;
+            p {
+                font-family: sans-serif;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #cacaca;
+                margin-top: 2rem;
+                cursor: pointer;
+
+                transition: all 0.4s ease-in-out;
+                &:hover {
+                    color: #fff;
+                }
+
+                &:last-child {
+                    border: 1px solid #222;
+                    padding: 10px 0;
+                    margin: 2rem;
+                    border-radius: 25px;
+                    background-color: #2ACFCF;
+                }
+            }
+       }
+    }
+}
+
+// ==========================
+// navbar design for mobile
+// ==========================
+
+
+@media screen and (max-width: 850px) {
+    header {
+        .links-container, .sign-log {
+            display: none !important;
+        }
+
+        .hamBurger {
+            display: block !important;
+        }
+        
+    }
+}
+
+// ================= 
+// hero section 
+// =================
+
+.hero-section {
+    .hero-img {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 3.5rem;
+        img {
+            width: 500px;
+        }
+    }
+    .text-zone {
+        text-align: center;
+        margin: 2rem 0;
+        h1 {
+            font-size: 40px;
+            color: #222;
+        }
+        h3 {
+            font-size: 18px;
+            color: #A0A0AE;
+            font-weight: 400;
+            padding: 1rem 0;
+        }
+
+    }
+}
+
+// ====================
+// link-section
+// ====================
+.link-section {
+    background-image: url('../images/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #3B3054;
+
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    margin-top: 5rem;
+
+    input {
+        width: 95%;
+        margin: 1.5rem 1rem 0 1rem;
+        font-size: 1rem;
+        padding: .9rem 1.5rem;
+        border-radius: 10px;
+        border: none;
+        color: #222;
+    }
+    button {
+        width: 95%;
+        margin: 1rem 1rem 1.5rem 1rem;
+        padding: .9rem;
+        border-radius: 10px;
+        border: none;
+        background: #2BD0D0;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+}
+
+// ====================
+// Advanced Statistics
+// ====================
+.statistics-section {
+    text-align: center;
+    width: 75%;
+    margin: 6rem auto;
+    div h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 1.2rem 0;
+    }
+    div p {
+        font-size: 18px;
+        color: #686868;
+        line-height: 2rem;
+    }
+    .stat-status {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+        .bar {
+            background-color: #2BD0D0;
+            width: 8px;
+            height: 45px;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    .brand{
+        width: 80px;
+        height: 80px;
+        background-color: #3B3054;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+}
+
+// ====================
+// boost section style
+// ====================
+.boost-section {
+    background-image: url('../images/boost-bg.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: #3B3054;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        padding-top: 2.5rem;
+        margin: 0;
+
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fff;
+    }
+    button {
+        margin: 2rem 0 2.5rem 0 ;
+    }
+}
+
+
+
+
+
+// ==================
+// button style
+// ==================
+button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    color: #fff;
+    background-color: #2BD0D0;
+    border: none;
+    border-radius: 28px;
+    margin-top: 20px;
+    width: 200px;
+    cursor: pointer;
+    &:active {
+        background-color: #43afaf;
+    }
+}
+
+// ==================
+// footer style
+// ==================
+footer {
+    background-color: #232127;
+    text-align: center;
+    height: 100%;
+    h2 {
+        padding-top: 4rem;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    ul {
+        h3 {
+            color: #fff;
+            padding: 2rem 0;
+            font-size: 18px;
+            font-weight: 600;
+
+        }
+        li {
+            a {
+                color: #fff;
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
+    }
+    .social-media {
+        margin-top: 2.5rem;
+        padding-bottom: 3.5rem;
+        a {
+            color: #fff;
+            font-size: 25px;
+            padding: .8rem;
+        }
+    }
+}
+
+// hero img responsive
+@media screen and (maz-width: 500px) {
+    .hero-section {
+        .hero-img {
+            img {
+                width: 320px !important; 
+            }
+        }
+    }
+}

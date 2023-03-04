@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 3.3125rem;
+}
+
+h2 {
+  font-size: 2.3125rem;
+}
+
+h3 {
+  font-size: 1.235rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section-padding {
+  padding: 2rem 4rem;
+}
+
+.section-margin {
+  margin: 2rem 4rem;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+}
+header .nav-container .links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-container .links-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav-container .links-container ul li {
+  padding: 0 1.5rem;
+}
+header .nav-container .links-container ul li a {
+  color: #222;
+  font-size: 1.2rem;
+}
+header .nav-container .links-container ul li a:hover {
+  padding-top: 16px;
+  border-top: 3px solid black;
+  transition: all 0.4s ease-out;
+}
+header .nav-container .sign-log a {
+  font-size: 1rem;
+  color: #222;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+header .nav-container .sign-log a:last-child {
+  margin-left: 1rem;
+  border: 1px solid #2ACFCF;
+}
+header .nav-container .sign-log a:last-child:hover {
+  background-color: #2ACFCF;
+  transition: all 0.4s ease-out;
+}
+header .nav-container .sign-log a:hover {
+  background: #222;
+  color: #fff;
+  transition: all 0.4s ease-out;
+}
+header .nav-container .hamBurger {
+  display: none;
+  font-size: 30px;
+  color: #4e4e4d;
+  cursor: pointer;
+}
+header .nav-mobile {
+  display: none;
+  background-color: #3B3054;
+  margin: 0.7rem;
+  border-radius: 10px;
+  height: 370px;
+  position: absolute;
+  width: 95%;
+}
+header .nav-mobile nav ul li {
+  text-align: center;
+  padding-top: 2rem;
+}
+header .nav-mobile nav ul li a {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+header .nav-mobile nav ul li a:hover {
+  color: #cacaca;
+}
+header .nav-mobile .center-line {
+  border-top: 2px solid grey;
+  margin: 2rem;
+}
+header .nav-mobile .sign-log-mobile {
+  text-align: center;
+}
+header .nav-mobile .sign-log-mobile p {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #cacaca;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+header .nav-mobile .sign-log-mobile p:hover {
+  color: #fff;
+}
+header .nav-mobile .sign-log-mobile p:last-child {
+  border: 1px solid #222;
+  padding: 10px 0;
+  margin: 2rem;
+  border-radius: 25px;
+  background-color: #2ACFCF;
+}
+
+@media screen and (max-width: 850px) {
+  header .links-container, header .sign-log {
+    display: none !important;
+  }
+  header .hamBurger {
+    display: block !important;
+  }
+}
+.hero-section .hero-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+.hero-section .hero-img img {
+  width: 500px;
+}
+.hero-section .text-zone {
+  text-align: center;
+  margin: 2rem 0;
+}
+.hero-section .text-zone h1 {
+  font-size: 40px;
+  color: #222;
+}
+.hero-section .text-zone h3 {
+  font-size: 18px;
+  color: #A0A0AE;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+.link-section {
+  background-image: url("../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #3B3054;
+  margin: 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 5rem;
+}
+.link-section input {
+  width: 95%;
+  margin: 1.5rem 1rem 0 1rem;
+  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  color: #222;
+}
+.link-section button {
+  width: 95%;
+  margin: 1rem 1rem 1.5rem 1rem;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  background: #2BD0D0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.statistics-section {
+  text-align: center;
+  width: 75%;
+  margin: 6rem auto;
+}
+.statistics-section div h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.2rem 0;
+}
+.statistics-section div p {
+  font-size: 18px;
+  color: #686868;
+  line-height: 2rem;
+}
+.statistics-section .stat-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.statistics-section .stat-status .bar {
+  background-color: #2BD0D0;
+  width: 8px;
+  height: 45px;
+}
+.statistics-section .stat-status h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.statistics-section .stat-status p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+.statistics-section .brand {
+  width: 80px;
+  height: 80px;
+  background-color: #3B3054;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.boost-section {
+  background-image: url("../images/boost-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #3B3054;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.boost-section h2 {
+  padding-top: 2.5rem;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+}
+.boost-section button {
+  margin: 2rem 0 2.5rem 0;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+  color: #fff;
+  background-color: #2BD0D0;
+  border: none;
+  border-radius: 28px;
+  margin-top: 20px;
+  width: 200px;
+  cursor: pointer;
+}
+button:active {
+  background-color: #43afaf;
+}
+
+footer {
+  background-color: #232127;
+  text-align: center;
+  height: 100%;
+}
+footer h2 {
+  padding-top: 4rem;
+  color: #fff;
+  font-weight: 600;
+}
+footer ul h3 {
+  color: #fff;
+  padding: 2rem 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+footer ul li a {
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+}
+footer .social-media {
+  margin-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+footer .social-media a {
+  color: #fff;
+  font-size: 25px;
+  padding: 0.8rem;
+}
+
+@media screen and (maz-width: 500px) {
+  .hero-section .hero-img img {
+    width: 320px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
